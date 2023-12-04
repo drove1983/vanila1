@@ -1,0 +1,63 @@
+.navbar-nav .nav-link {
+    color: rgba(0,0,0,1) ;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,.5) ;
+}
+
+/* Promena boje teksta na ekranima širim od 992px */
+@media (min-width: 992px) {
+ }
+    .navbar-nav .nav-link {
+        color: rgba(255, 0, 0, 1); /* Crvena boja teksta */
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: rgba(255, 0, 0, 0.5); /* Polu-transparentna crvena boja teksta pri hoveru */
+    }
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+#blogtitle {
+    font-size: 6rem;
+}
+
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 4rem;
+    }
+    #blogdetailtitle {
+        font-size: 5rem;
+    }
+
+.counter {
+    background-color:#f6f6f6;
+    padding: 40px 0;
+    border-radius: 5px;
+}
+
+.count-title {
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.count-text {
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.fa-2x {
+    margin: 0 auto;
+    float: none;
+    display: table;
+    color: #f58989;
+}

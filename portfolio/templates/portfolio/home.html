@@ -1,0 +1,95 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <div class="row justify-content-center my-3">
+    <div class="col-5">
+      <img src="{% static 'images/vanila111.jpg' %}" class="img-fluid">
+    </div>
+  </div>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<div class="container">
+	<div class="row">
+	    <br/>
+	   <div class="col text-center">
+		<h2></h2>
+		<p></p>
+		</div>
+
+
+
+	</div>
+		<div class="row text-center">
+	        <div class="col">
+	        <div class="counter">
+      <i class="fa fa-code fa-2x"></i>
+      <h2 class="timer count-title count-number" data-to="1100" data-speed="1500"></h2>
+       <p class="count-text ">Unser Kunde</p>
+    </div>
+	        </div>
+              <div class="col">
+               <div class="counter">
+      <i class="fa fa-coffee fa-2x"></i>
+      <h2 class="timer count-title count-number" data-to="980" data-speed="1500"></h2>
+      <p class="count-text ">Zufriedene Kunden</p>
+    </div>
+              </div>
+              <div class="col">
+                  <div class="counter">
+      <i class="fa fa-lightbulb-o fa-2x"></i>
+      <h2 class="timer count-title count-number" data-to="500" data-speed="1500"></h2>
+      <p class="count-text ">Projekt abgeschlossen</p>
+    </div></div>
+              <div class="col">
+              <div class="counter">
+      <i class="fa fa-bug fa-2x"></i>
+      <h2 class="timer count-title count-number" data-to="183" data-speed="1500"></h2>
+      <p class="count-text ">Kaffee mit Kunden</p>
+    </div>
+              </div>
+         </div>
+</div>
+
+  <div class="row justify-content-center mb-3">
+    <div class="col-md-10 text-center">
+      <p class="h1">Adresse: class="h3"</p>
+    </div>
+  </div>
+
+  <h2 class="mt-5">VANILA</h2>
+  <hr>
+  <div class="row">
+    {% for project in projects %}
+      <div class="col-lg-4 col-md-6">
+        {% if project.url %}
+          <a href="{{ project.url }}">
+            <img src="{{ project.image.url }}" class="img-fluid mb-2">
+          </a>
+        {% else %}
+          <img src="{{ project.image.url }}" class="img-fluid mb-2">
+        {% endif %}
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="container">
+    {% for x in video %}
+      <h3 class="text-center mt-2 mb-2">{{ x.caption }}</h3>
+      <video class="embed-responsive embed-responsive-16by9" controls>
+        <source src="{{ x.video.url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    {% endfor %}
+  </div>
+{% endblock %}
+
+
