@@ -96,3 +96,9 @@ jQuery(function ($) {
 	$this.countTo(options);
   }
 });
+
+function rejectCookies() {
+    // Ovde možete dodati kod za brisanje ili odbijanje kolačića, na primer:
+    document.cookie = "cookie_name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.getElementById("cookie-notice").style.display = "none";
+}

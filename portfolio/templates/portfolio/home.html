@@ -9,7 +9,6 @@
     </div>
   </div>
 
-
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
@@ -21,50 +20,38 @@
 	   <div class="col text-center">
 		<h2></h2>
 		<p></p>
-		</div>
-
-
-
-	</div>
-		<div class="row text-center">
-	        <div class="col">
-	        <div class="counter">
-      <i class="fa fa-code fa-2x"></i>
-      <h2 class="timer count-title count-number" data-to="1100" data-speed="1500"></h2>
-       <p class="count-text ">Unser Kunde</p>
-    </div>
-	        </div>
-              <div class="col">
-               <div class="counter">
-      <i class="fa fa-coffee fa-2x"></i>
-      <h2 class="timer count-title count-number" data-to="980" data-speed="1500"></h2>
-      <p class="count-text ">Zufriedene Kunden</p>
-    </div>
-              </div>
-              <div class="col">
-                  <div class="counter">
-      <i class="fa fa-lightbulb-o fa-2x"></i>
-      <h2 class="timer count-title count-number" data-to="500" data-speed="1500"></h2>
-      <p class="count-text ">Projekt abgeschlossen</p>
+	</div></div>
+    <div class="row text-center"><div class="col"><div class="counter"><i class="fa fa-code fa-2x"></i>
+        <h2 class="timer count-title count-number" data-to="1100" data-speed="1500"></h2>
+        <p class="count-text ">Unser Kunde</p>
     </div></div>
-              <div class="col">
-              <div class="counter">
-      <i class="fa fa-bug fa-2x"></i>
-      <h2 class="timer count-title count-number" data-to="183" data-speed="1500"></h2>
-      <p class="count-text ">Kaffee mit Kunden</p>
+        <div class="col"><div class="counter">
+        <i class="fa fa-coffee fa-2x"></i>
+        <h2 class="timer count-title count-number" data-to="980" data-speed="1500"></h2>
+        <p class="count-text ">Zufriedene Kunden</p>
     </div>
-              </div>
-         </div>
+        </div>
+        <div class="col"><div class="counter">
+        <i class="fa fa-lightbulb-o fa-2x"></i>
+        <h2 class="timer count-title count-number" data-to="500" data-speed="1500"></h2>
+        <p class="count-text ">Projekt abgeschlossen</p>
+    </div>
+        </div>
+        <div class="col"><div class="counter"><i class="fa fa-bug fa-2x"></i><h2 class="timer count-title count-number" data-to="183" data-speed="1500"></h2>
+           <p class="count-text ">Kaffee mit Kunden</p>
+        </div>
+        </div>
+    </div>
 </div>
-
-  <div class="row justify-content-center mb-3">
-    <div class="col-md-10 text-center">
-      <p class="h1">Adresse: class="h3"</p>
-    </div>
+<br>
+<div class="card">
+  <h3 class="card-header text-center">Adresse</h3>
+  <div class="card-body text-center">
+    <p>Bad Reichenhall, Bahnhofpl. 4, 83435 Bad Reichenhall</p>
+    <p>Phone: 08651 9962548</p>
   </div>
-
-  <h2 class="mt-5">VANILA</h2>
-  <hr>
+</div>
+<br>
   <div class="row">
     {% for project in projects %}
       <div class="col-lg-4 col-md-6">
@@ -79,17 +66,10 @@
         <p>{{ project.description }}</p>
       </div>
     {% endfor %}
+
   </div>
 
-  <div class="container">
-    {% for x in video %}
-      <h3 class="text-center mt-2 mb-2">{{ x.caption }}</h3>
-      <video class="embed-responsive embed-responsive-16by9" controls>
-        <source src="{{ x.video.url }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    {% endfor %}
-  </div>
+<br><br><br>
 {% endblock %}
 
 

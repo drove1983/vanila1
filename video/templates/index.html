@@ -3,35 +3,39 @@
 {% load static %}
 
 {% block content %}
-
-{{ '<' }}{{ '!DOCTYPE html>' }}
-<html lang="en">
-<div class="row justify-content-center my-3">
-    <div class="col-5">
-      <img src="{% static 'images/vanila111.jpg' %}" class="img-fluid">
-    </div>
-  </div>
+  {{ '<' }}{{ '!DOCTYPE html>' }}
+  <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>VIDEO</title>
-  </head>
-  <body>
-    <h1>Video</h1>
-  <hr>
-  <div class="container">
-    {% for x in video %}
-    <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
-     <video class="embed-responsive embed-responsive-16by9 " controls>
-        <source src="{{x.video.url}}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    {% endfor %}
+    <div class="row justify-content-center my-3">
+    <div class="col-5">
+      <img src="{% static 'images/vanila111.jpg' %}" class="img-fluid">
+    </div>
   </div>
 
+    <title>VIDEO</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      {% for x in video %}
+        <div class="card mb-3" style="background-color: #f7faf9;">
+          <div class="card-body">
+            <h3 class="card-title text-center mt-2 mb-2">{{ x.caption }}</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+              <video class="embed-responsive-item" controls>
+                <source src="{{ x.video.url }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </body>
-</html>
-<br><br><br>
+  </html>
+  <br><br><br>
 {% endblock %}

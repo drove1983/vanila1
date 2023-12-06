@@ -25,8 +25,8 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('blog/', include('blog.urls')),
     path('video/', include('video.urls')),
-    #path('set_cookie/', views.set_cookie, name='set_cookie'),
-    #path('read_cookie/', views.read_cookie, name='read_cookie'),
+    path('cookie-policy/', views.cookie_policy, name='cookie-policy'),
+
 
 ]
 

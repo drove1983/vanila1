@@ -3,6 +3,13 @@
 {{ '<' }}{{ '!DOCTYPE html>' }}
 <html lang="en">
 
+<div id="cookie-notice" class="alert alert-info">
+Diese Webseite verwendet Cookies zur Verbesserung der Benutzererfahrung.
+    <a href="{% url 'cookie-policy' %}">Erfahren Sie mehr</a> Über Cookies und wie wir sie verwenden.
+    <button  onclick="acceptCookies()" class="btn btn-success">Akzeptieren</button>
+    <button onclick="rejectCookies()" class="btn btn-danger">Ablehnen</button>
+</div>
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -43,10 +50,10 @@
             <a class="nav-link" href="{% static 'images/menu.pdf' %}">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://m.facebook.com/vedran.batinic/" target="_blank">Facebook</a>
+            <a class="nav-link" href="https://www.facebook.com/profile.php/?id=100083528224447" target="_blank">Facebook</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.linkedin.com/in/vedran-batini%C4%87-8b83801ab/?trk=public_profile_browsemap&originalSubdomain=de" target="_blank">Linkedin</a>
+            <a class="nav-link" href="https://www.instagram.com/eiscafe_vanilla/" target="_blank">Instagram</a>
           </li>
           <li>
             <a class="nav-link" href="{% url 'video:index' %}" target="_blank">Video</a>

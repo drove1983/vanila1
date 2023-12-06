@@ -6,17 +6,6 @@
     color: rgba(0,0,0,.5) ;
 }
 
-/* Promena boje teksta na ekranima širim od 992px */
-@media (min-width: 992px) {
- }
-    .navbar-nav .nav-link {
-        color: rgba(255, 0, 0, 1); /* Crvena boja teksta */
-    }
-
-    .navbar-nav .nav-link:hover {
-        color: rgba(255, 0, 0, 0.5); /* Polu-transparentna crvena boja teksta pri hoveru */
-    }
-
 body {
     font-family: 'Lato', sans-serif;
 }
@@ -61,3 +50,18 @@ body {
     display: table;
     color: #f58989;
 }
+/* styles.css */
+.footer {
+  background-color: #f58989 !important;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-height: 30px ; /* Promijenite visinu prema potrebi */
+}
+
+
+
+

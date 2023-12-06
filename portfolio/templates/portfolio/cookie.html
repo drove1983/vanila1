@@ -1,0 +1,72 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+{{ '<' }}{{ '!DOCTYPE html>' }}
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzrichtlinie</title>
+
+    <!-- Uključite Bootstrap stilove -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Dodajte stilizaciju za politiku privatnosti */
+        .privacy-policy {
+            text-align: center;
+            background-color: #f58989;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <br>
+
+<!-- Glavni sadržaj politike privatnosti -->
+<div class="container mt-5 privacy-policy" style="color: white;">
+    <h1 class="display-4" style="color: white;">Datenschutzrichtlinie</h1>
+    <p class="lead">Willkommen auf unserer Website. Hier erklären wir, wie wir Ihre persönlichen Daten sammeln, verwenden und schützen.</p>
+
+    <h4>1. Recht auf Informationen über Cookies</h4>
+    <p>Nutzer haben das Recht, darüber informiert zu werden, welche Arten von Cookies auf der Website verwendet werden, zu welchem Zweck sie eingesetzt werden und wer sie platziert.</p>
+
+    <h4>2. Recht auf Einwilligung</h4>
+    <p>Nutzer haben das Recht zu entscheiden, ob sie Cookies akzeptieren möchten oder nicht. Websites sollten die ausdrückliche Einwilligung der Nutzer einholen, bevor nicht notwendige Cookies für die grundlegende Funktionalität der Website gesetzt werden.</p>
+
+    <h4>3. Recht auf die Verwaltung von Cookies</h4>
+    <p>Nutzer sollten die Möglichkeit haben, ihre Cookie-Einstellungen zu verwalten, einschließlich des Blockierens oder Löschen von Cookies nach eigenem Ermessen.</p>
+
+    <h4>4. Recht auf Informationen zur Dauer der Cookies:</h4>
+    <p>Nutzer sollten darüber informiert werden, wie lange Cookies auf ihrem Gerät verbleiben und wann sie automatisch ablaufen oder gelöscht werden.</p>
+
+    <h4>5. Recht auf Transparenz:</h4>
+    <p>Organisationen sollten transparent sein, wie sie Cookies verwenden und welche Daten sie über diese sammeln.</p>
+
+    <h4>6. Recht auf Zugang und Berichtigung</h4>
+    <p>Nutzer sollten die Möglichkeit haben, auf die über Cookies gespeicherten Daten zuzugreifen und sie zu korrigieren, wenn sie ungenau oder unvollständig sind.</p>
+
+    <h4>7. Recht auf Löschung</h4>
+    <p>Nutzer haben das Recht, die Löschung von Cookies von ihrem Gerät zu verlangen.</p>
+
+    <h4>8. Recht auf Widerspruch</h4>
+    <p>Nutzer sollten das Recht haben, gegen die Verwendung bestimmter Cookies oder gegen die Verarbeitung von Daten über Cookies Widerspruch einzulegen.</p>
+
+
+
+</div>
+</div>
+
+<!-- Uključite Bootstrap JavaScript i jQuery (opcionalno) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+<br><br><br><br><br><br>
+{% endblock %}
