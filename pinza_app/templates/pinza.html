@@ -1,0 +1,38 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <div class="row justify-content-center my-3">
+    <div class="col-5">
+      <img src="{% static 'images/vanila111.jpg' %}" class="img-fluid">
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    {% for pinza in pinza %}
+      <div class="col-lg-4 col-md-6 mb-3">
+  <div class="card mb-4 h-100" style="background-color: #f58989">
+    {% if pinza.url %}
+      <a href="{{ pinza.url }}">
+        <img src="{{ pinza.image.url }}" class="card-img-top image-frame mb-2 p-2">
+      </a>
+    {% else %}
+      <img src="{{ pinza.image.url }}" class="card-img-top image-frame mb-2 p-2">
+    {% endif %}
+    <div class="card-body">
+      <h5 class="card-title text-center text-white">{{ pinza.title }}</h5>
+      <p class="card-text text-center text-white">{{ pinza.description }}</p>
+    </div>
+  </div>
+</div>
+    {% endfor %}
+  </div>
+</div>
+    </div>
+  </div>
+
+  <br><br><br>
+{% endblock %}
+

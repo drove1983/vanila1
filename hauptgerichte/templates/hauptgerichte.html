@@ -1,0 +1,37 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <div class="row justify-content-center my-3">
+    <div class="col-5">
+      <img src="{% static 'images/vanila111.jpg' %}" class="img-fluid">
+    </div>
+  </div>
+ <div class="container">
+  <div class="row">
+    {% for hauptgerichte in hauptgerichte%}
+      <div class="col-lg-4 col-md-6 mb-3">
+        <div class="card mb-4 h-100" style="background-color: #f58989"> <!-- Dodali smo klasu "card" za stiliziranje kartice -->
+          {% if hauptgerichte.url %}
+            <a href="{{ hauptgerichte.url }}">
+              <img src="{{ hauptgerichte.image.url }}" class="card-img-top image-frame mb-2 p-2"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
+            </a>
+          {% else %}
+            <img src="{{ hauptgerichte.image.url }}" class="card-img-top image-frame mb-2 p-2"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title text-center text-white">{{ hauptgerichte.title }}</h5>
+            <p class="card-text text-center text-white">{{hauptgerichte.description }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <br><br><br>
+{% endblock %}

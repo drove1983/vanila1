@@ -1,0 +1,125 @@
+.navbar-nav .nav-link {
+    color: rgba(0,0,0,1) ;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,.5) ;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+#blogtitle {
+    font-size: 6rem;
+}
+
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 4rem;
+    }
+    #blogdetailtitle {
+        font-size: 5rem;
+    }
+
+.counter {
+    background-color:#f58989;
+    padding: 40px 0;
+    border-radius: 5px;
+}
+
+.count-title {
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+
+.card {
+  background-color: black !important;
+  /*height: 300px;   Postavite željenu visinu kartica */
+}
+
+}
+
+.count-text {
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.fa-2x {
+    margin: 0 auto;
+    float: none;
+    display: table;
+    color: black;
+}
+/* styles.css */
+.footer {
+  background-color: #f58989 !important;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-height: 30px ; /* Promijenite visinu prema potrebi */
+}
+
+.carousel-inner {
+  border: 2px solid #f58989; /* Promijenite boju okvira prema potrebi */
+  border-radius: 5px; /* Zaobljenje okvira */
+  background-color: #f58989; /* Boja pozadine okvira */
+  padding: 10px; /* Dodavanje unutarnjeg razmaka oko slajdova */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto; /* Automatsko očuvanje omjera širine i visine */
+  max-height: 400px; /* Prilagodite maksimalnu visinu prema potrebi */
+}
+
+/* Stil za okvir */
+.card-container {
+  width: 100%;
+  max-width: 600px; /* Postavite maksimalnu širinu okvira prema svojim potrebama */
+  margin: 0 auto; /* Centrirajte okvir na sredinu */
+
+}
+
+.card {
+  border: 2px solid #f58989; /* Dodajte okvir oko kartice */
+  border-radius: 10px; /* Dodajte zaobljeni rub okvira */
+  padding: 0px; /* Dodajte margine i razmak unutar okvira */
+
+}
+
+/* Prilagodite stil teksta i okvira prema svojim potrebama */
+.card-title {
+  font-size: 24px;
+}
+
+.card-text {
+  font-size: 16px;
+}
+
+/* Stilizacija za padajući meni kada je otvoren */
+.navbar-nav .nav-item.dropdown.show .dropdown-menu {
+    background-color: #f58989;
+}
+
+/* Stilizacija za linkove unutar otvorenog padajućeg menija */
+.navbar-nav .nav-item.dropdown.show .dropdown-menu .dropdown-item {
+    color: white; /* Promenite boju teksta po potrebi */
+}
+
+/* Stilizacija za linkove unutar otvorenog padajućeg menija na hover */
+.navbar-nav .nav-item.dropdown.show .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Boja na hover efektu */
+    color: white; /* Promenite boju teksta na hover efektu po potrebi */
+}
+
+
+

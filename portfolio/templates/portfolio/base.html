@@ -6,7 +6,7 @@
 <div id="cookie-notice" class="alert alert-info">
 Diese Webseite verwendet Cookies zur Verbesserung der Benutzererfahrung.
     <a href="{% url 'cookie-policy' %}">Erfahren Sie mehr</a> Über Cookies und wie wir sie verwenden.
-    <button  onclick="acceptCookies()" class="btn btn-success">Akzeptieren</button>
+    <button onclick="acceptCookies()" class="btn btn-success">Akzeptieren</button>
     <button onclick="rejectCookies()" class="btn btn-danger">Ablehnen</button>
 </div>
 
@@ -21,7 +21,7 @@ Diese Webseite verwendet Cookies zur Verbesserung der Benutzererfahrung.
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="{% static 'images/custom.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
   <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
 
@@ -46,20 +46,34 @@ Diese Webseite verwendet Cookies zur Verbesserung der Benutzererfahrung.
       </button>
       <div class="collapse navbar-collapse text-center" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{% static 'images/menu.pdf' %}">Menu</a>
+          <ul class="nav">
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Produkte
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'pinza_app:pinza' %}">Pinza</a>
+                <a class="dropdown-item" href="{% url 'hauptgerichte:hauptgerichte' %}">Hauptgerichte</a>
+                <a class="dropdown-item" href="{% url 'brotzeit:brotzeit' %}">Brotzeit</a>
+                <a class="dropdown-item" href="{% url 'salate:salate' %}">Salate</a>
+                <a class="dropdown-item" href="{% url 'desserts:desserts' %}">Desserts</a>
+            </div>
+        </li>
+    </ul>
+          <li>
+            <a class="nav-link" href="{% url 'video:index' %}" >Video</a>
+          </li>
+          <li>
+            <a class="nav-link" href="{% url 'blog:all_blogs' %}" >Blog</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="{% static 'images/menu.pdf' %}">Menu PDF</a>
+          </li>
+           <li class="nav-item">
             <a class="nav-link" href="https://www.facebook.com/profile.php/?id=100083528224447" target="_blank">Facebook</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://www.instagram.com/eiscafe_vanilla/" target="_blank">Instagram</a>
-          </li>
-          <li>
-            <a class="nav-link" href="{% url 'video:index' %}" target="_blank">Video</a>
-          </li>
-          <li>
-            <a class="nav-link" href="{% url 'blog:all_blogs' %}" target="_blank">Blog</a>
           </li>
         </ul>
       </div>
@@ -96,6 +110,28 @@ Diese Webseite verwendet Cookies zur Verbesserung der Benutzererfahrung.
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
-<script src="{% static 'images/uredi.js' %}"></script>
+<script src="{% static 'js/uredi.js' %}"></script>
+
+<script>
+    function acceptCookies() {
+        console.log("Funkcija acceptCookies je pozvana.");
+        // Postavite kolačić koji označava da su kolačići prihvaćeni
+        document.cookie = "cookies_accepted=true; expires=Fri, 31 Dec 9999 23:59:59 UTC; path=/;";
+        document.getElementById("cookie-notice").style.display = "none";
+    }
+
+    function rejectCookies() {
+        // Obrišite kolačić koji označava da su kolačići prihvaćeni
+        document.cookie = "cookies_accepted=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.getElementById("cookie-notice").style.display = "none";
+    }
+
+    // Provjerite ako je korisnik već prihvatio kolačiće
+    if (document.cookie.indexOf("cookies_accepted=true") !== -1) {
+        document.getElementById("cookie-notice").style.display = "none";
+
+
+    }
+  </script>
 
 </html>

@@ -12,16 +12,16 @@
 
 <h1 id="blogtitle" class="font-weight-bold text-center"></h1>
 
-<h3 class="text-center mb-5">Vedran has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h3>
+<h3 class="text-center mb-5">Admin has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h3>
 
 {% for blog in blogs %}
-<div class="card my-3" style="background-color: #f7faf9;">
+<div class="card my-3" style="background-color: #f58989;">
   <div class="card-body">
     <a href="{% url 'blog:detail' blog.id %}">
       <h2 class="card-title text-center text-black">{{ blog.title }}</h2>
     </a>
-    <h5 class="card-subtitle text-center text-muted">{{ blog.date|date:'M d Y'|upper }}</h5>
-    <p class="card-text text-center text-black">{{ blog.description|striptags|truncatechars:40}}</p>
+    <h5 class="card-subtitle text-center text-white">{{ blog.date|date:'M d Y'|upper }}</h5>
+    <p class="card-text text-center text-white">{{ blog.description|striptags|truncatechars:40}}</p>
   </div>
 </div>
 

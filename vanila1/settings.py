@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import  os
+#from django.core.wsgi import get_wsgi_application
+
+#os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'vanila1.settings')
+
+#application = get_wsgi_application()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,6 +46,14 @@ INSTALLED_APPS = [
     'blog',
     'portfolio',
     'video',
+    'pinza_app',
+    'hauptgerichte',
+    'brotzeit',
+    'salate',
+    'desserts',
+    'csp'
+    #'google_map',
+
 ]
 
 MIDDLEWARE = [
@@ -48,11 +61,27 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'django.contrib.admin',
+    'csp.middleware.CSPMiddleware',
     #'django.middleware.cookies.CookiesMiddleware',
 ]
+
+# Postavite CSP politiku ovde
+CSP_DEFAULT_SRC = ("'self'", "'unsafe-eval'", "'unsafe-inline'", "*")
+
+SECURE_HSTS_SECONDS = 31536000  # Postavlja HSTS na trajanje od 1 godine
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+X_CONTENT_TYPE_OPTIONS = 'nosniff'
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+SECURE_BROWSER_XSS_FILTER = True
 
 ROOT_URLCONF = 'vanila1.urls'
 
@@ -130,3 +159,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #SESSION_COOKIE_AGE = 3600
+
+#GOOGLE_MAPS_API_KEY = os.environ.get('AAA_MAPS_API')

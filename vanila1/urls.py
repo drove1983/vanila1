@@ -26,6 +26,13 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('video/', include('video.urls')),
     path('cookie-policy/', views.cookie_policy, name='cookie-policy'),
+    path('pinza_app/', include('pinza_app.urls')),
+    path('hauptgerichte/', include('hauptgerichte.urls')),
+    path('brotzeit/', include('brotzeit.urls')),
+    path('salate/', include('salate.urls')),
+    path('desserts/', include('desserts.urls')),
+
+
 
 
 ]
