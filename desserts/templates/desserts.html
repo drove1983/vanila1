@@ -17,18 +17,18 @@
       <div class="container">
   <div class="row">
     {% for desserts in desserts %}
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6 mb-3">
         <div class="card mb-4 h-100" style="background-color: #f58989"> <!-- Dodali smo klasu "card" za stiliziranje kartice -->
           {% if desserts.url %}
             <a href="{{ desserts.url }}">
-              <img src="{{ desserts.image.url }}" class="card-img-top image-frame"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
+              <img src="{{ desserts.image.url }}" class="card-img-top image-frame mb-2 p-2"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
             </a>
           {% else %}
-            <img src="{{ desserts.image.url }}" class="card-img-top image-frame"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
+            <img src="{{ desserts.image.url }}" class="card-img-top image-frame mb-2 p-2"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
           {% endif %}
           <div class="card-body">
-            <h5 class="card-title">{{ desserts.title }}</h5>
-            <p class="card-text">{{ desserts.description }}</p>
+            <h5 class="card-title text-center text-white">{{ desserts.title }}</h5>
+            <p class="card-text text-center text-white ">{{ desserts.description }}</p>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 from django.test import TestCase, Client
 from django.urls import reverse
-
+from .models import Blog
 # Create your tests here.
 class ExampleViewTestCase(TestCase):
     def setUp(self):

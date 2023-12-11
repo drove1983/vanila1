@@ -34,51 +34,51 @@ Diese Webseite verwendet Cookies zur Verbesserung der Benutzererfahrung.
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f58989;">
-    <div class="container">
-      <a class="navbar-brand" href="{% url 'home' %}">
-       <img src="{% static 'images/vanila111.jpg' %}" width="160" height="80" class="d-inline-block align-top" alt="Vanila Logo">
-        <a href="{% url 'home' %}">
-          <span style="color: white; font-weight: bold;">VANILA</span>
-       </a>
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}">
+      <img src="{% static 'images/vanila111.jpg' %}" width="160" height="80" class="d-inline-block align-top" alt="Vanila Logo">
+      <a href="{% url 'home' %}">
+        <span style="color: white; font-weight: bold;">VANILA</span>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse text-center" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <ul class="nav">
-            <li class="nav-item dropdown">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon animated-icon">☰</span>
+</button>
+    <div class="collapse navbar-collapse text-center" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <ul class="nav">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Produkte
+              Produkte
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'pinza_app:pinza' %}">Pinza</a>
-                <a class="dropdown-item" href="{% url 'hauptgerichte:hauptgerichte' %}">Hauptgerichte</a>
-                <a class="dropdown-item" href="{% url 'brotzeit:brotzeit' %}">Brotzeit</a>
-                <a class="dropdown-item" href="{% url 'salate:salate' %}">Salate</a>
-                <a class="dropdown-item" href="{% url 'desserts:desserts' %}">Desserts</a>
+              <a class="dropdown-item" href="{% url 'pinza_app:pinza' %}">Pinza</a>
+              <a class="dropdown-item" href="{% url 'hauptgerichte:hauptgerichte' %}">Hauptgerichte</a>
+              <a class="dropdown-item" href="{% url 'brotzeit:brotzeit' %}">Brotzeit</a>
+              <a class="dropdown-item" href="{% url 'salate:salate' %}">Salate</a>
+              <a class="dropdown-item" href="{% url 'desserts:desserts' %}">Desserts</a>
             </div>
-        </li>
-    </ul>
-          <li>
-            <a class="nav-link" href="{% url 'video:index' %}" >Video</a>
-          </li>
-          <li>
-            <a class="nav-link" href="{% url 'blog:all_blogs' %}" >Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% static 'images/menu.pdf' %}">Menu PDF</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="https://www.facebook.com/profile.php/?id=100083528224447" target="_blank">Facebook</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/eiscafe_vanilla/" target="_blank">Instagram</a>
           </li>
         </ul>
-      </div>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'video:index' %}" >Video</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'blog:all_blogs' %}" >Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% static 'images/menu.pdf' %}">Menu PDF</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.facebook.com/profile.php/?id=100083528224447" target="_blank">Facebook</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.instagram.com/eiscafe_vanilla/" target="_blank">Instagram</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <div class="container">
     {% block content %}
@@ -132,6 +132,8 @@ Diese Webseite verwendet Cookies zur Verbesserung der Benutzererfahrung.
 
 
     }
+
+
   </script>
 
 </html>

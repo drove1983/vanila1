@@ -17,18 +17,18 @@
       <div class="container">
   <div class="row">
     {% for salate in salate %}
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6 mb-3">
         <div class="card mb-4 h-100" style="background-color: #f58989"> <!-- Dodali smo klasu "card" za stiliziranje kartice -->
           {% if salate.url %}
             <a href="{{ salate.url }}">
-              <img src="{{ salate.image.url }}" class="card-img-top image-frame"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
+              <img src="{{ salate.image.url }}" class="card-img-top image-frame mb-2 p-2"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
             </a>
           {% else %}
-            <img src="{{ salate.image.url }}" class="card-img-top image-frame"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
+            <img src="{{ salate.image.url }}" class="card-img-top image-frame mb-2 p-2"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
           {% endif %}
           <div class="card-body">
-            <h5 class="card-title">{{ salate.title }}</h5>
-            <p class="card-text">{{ salate.description }}</p>
+            <h5 class="card-title text-center text-white ">{{ salate.title }}</h5>
+            <p class="card-text text-center text-white  ">{{ salate.description }}</p>
           </div>
         </div>
       </div>

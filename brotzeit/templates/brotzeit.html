@@ -17,18 +17,18 @@
       <div class="container">
   <div class="row">
     {% for brotzeit in brotzeit %}
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6 mb-3">
         <div class="card mb-4 h-100" style="background-color: #f58989"> <!-- Dodali smo klasu "card" za stiliziranje kartice -->
           {% if brotzei.url %}
             <a href="{{ brotzeit.url }}">
-              <img src="{{ brotzeit.image.url }}" class="card-img-top image-frame"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
+              <img src="{{ brotzeit.image.url }}" class="card-img-top image-frame mb-2 p-2"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
             </a>
           {% else %}
-            <img src="{{ brotzeit.image.url }}" class="card-img-top image-frame"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
+            <img src="{{ brotzeit.image.url }}" class="card-img-top image-frame mb-2 p-2"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
           {% endif %}
           <div class="card-body">
-            <h5 class="card-title">{{ brotzeit.title }}</h5>
-            <p class="card-text">{{ brotzeit.description }}</p>
+            <h5 class="card-title text-center text-white">{{ brotzeit.title }}</h5>
+            <p class="card-text text-center text-white">{{ brotzeit.description }}</p>
           </div>
         </div>
       </div>
