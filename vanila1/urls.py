@@ -33,8 +33,6 @@ urlpatterns = [
     path('desserts/', include('desserts.urls')),
 
 
-
-
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
