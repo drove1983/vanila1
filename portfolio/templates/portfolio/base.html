@@ -2,14 +2,6 @@
 
 {{ '<' }}{{ '!DOCTYPE html>' }}
 <html lang="en">
-
-<div id="cookie-notice" class="alert alert-info">
-Diese Webseite verwendet Cookies zur Verbesserung der Benutzererfahrung.
-    <a href="{% url 'cookie-policy' %}">Erfahren Sie mehr</a> Über Cookies und wie wir sie verwenden.
-    <button onclick="acceptCookies()" class="btn btn-success">Akzeptieren</button>
-    <button onclick="rejectCookies()" class="btn btn-danger">Ablehnen</button>
-</div>
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -29,79 +21,81 @@ Diese Webseite verwendet Cookies zur Verbesserung der Benutzererfahrung.
 
   <link rel="icon" type="image/png" href="{% static 'images/vanila111.jpg' %}">
 
-
   <title>vanila</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f58989;">
-  <div class="container">
-    <a class="navbar-brand" href="{% url 'home' %}">
-      <img src="{% static 'images/vanila111.jpg' %}" width="160" height="80" class="d-inline-block align-top" alt="Vanila Logo">
-      <a href="{% url 'home' %}">
-        <span style="color: white; font-weight: bold;">VANILA</span>
-      </a>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #A9A9A9;">
+
+    <div class="container">
+  <a class="navbar-brand mr-auto" href="{% url 'home' %}">
+    <img src="{% static 'images/Eis1.gif' %}" width="160" height="80" class="d-inline-block align-top" alt="Vanila Logo">
+    <span style="color: white; font-weight: bold;">EIS & CAFE - VANILLA</span>
+  </a>
+</div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon animated-icon">☰</span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'video:index' %}" >Video</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'blog:all_blogs' %}" >Blog</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% static 'images/menu.pdf' %}">Menu PDF</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.facebook.com/profile.php/?id=100083528224447" target="_blank">Facebook</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.instagram.com/eiscafe_vanilla/" target="_blank">Instagram</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Produkte
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon animated-icon">☰</span>
-</button>
-    <div class="collapse navbar-collapse text-center" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <ul class="nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Produkte
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{% url 'pinza_app:pinza' %}">Pinza</a>
-              <a class="dropdown-item" href="{% url 'hauptgerichte:hauptgerichte' %}">Hauptgerichte</a>
-              <a class="dropdown-item" href="{% url 'brotzeit:brotzeit' %}">Brotzeit</a>
-              <a class="dropdown-item" href="{% url 'salate:salate' %}">Salate</a>
-              <a class="dropdown-item" href="{% url 'desserts:desserts' %}">Desserts</a>
-            </div>
-          </li>
-        </ul>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'video:index' %}" >Video</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'blog:all_blogs' %}" >Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% static 'images/menu.pdf' %}">Menu PDF</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.facebook.com/profile.php/?id=100083528224447" target="_blank">Facebook</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.instagram.com/eiscafe_vanilla/" target="_blank">Instagram</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+   <a class="dropdown-item" href="{% url 'pinza_app:pinza' %}">Pinza</a>
+   <a class="dropdown-item" href="{% url 'hauptgerichte:hauptgerichte' %}">Hauptgerichte</a>
+   <a class="dropdown-item" href="{% url 'brotzeit:brotzeit' %}">Brotzeit</a>
+   <a class="dropdown-item" href="{% url 'salate:salate' %}">Salate</a>
+   <a class="dropdown-item" href="{% url 'desserts:desserts' %}">Desserts</a>
+</div>
+  </li>
+</ul>
+      </div>
+  </nav>
 
   <div class="container">
     {% block content %}
     {% endblock %}
   </div>
 
-  <footer class="footer" style="background-color: #f58989; color: white;">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <p>&copy; 2023 Your Website</p>
-      </div>
-      <div class="col-md-6 text-md-right">
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Home</a></li>
-          <li class="list-inline-item"><a href="#">About</a></li>
-          <li class="list-inline-item"><a href="#">Services</a></li>
-          <li class="list-inline-item"><a href="#">Contact</a></li>
-        </ul>
+  <footer class="footer" style="background-color: #A9A9A9; color: white;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2023 Your Website</p>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="mailto:eiscafe.vanilla@outlook.de" style="color: white;">EMAIL: eiscafe.vanilla@outlook.de</a></li>
+          </ul>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="tel:+4986519962548" style="color: white;">TEL: +49 (865 1)99 625 48</a></li>
+          </ul>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="tel:+4915906551348" style="color: white;">TEL: +49 159 065 513 48</a></li>
+          </ul>
+          <ul class="list-inline">
+            <li class="list-inline-item" style="color: white;">ADRESSE: Bahnhofplatz 4, 83435 Bad Reichenhall</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -109,31 +103,26 @@ Diese Webseite verwendet Cookies zur Verbesserung der Benutzererfahrung.
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-</body>
-<script src="{% static 'js/uredi.js' %}"></script>
+  <script src="{% static 'js/uredi.js' %}"></script>
 
-<script>
+  <script>
     function acceptCookies() {
-        console.log("Funkcija acceptCookies je pozvana.");
-        // Postavite kolačić koji označava da su kolačići prihvaćeni
-        document.cookie = "cookies_accepted=true; expires=Fri, 31 Dec 9999 23:59:59 UTC; path=/;";
-        document.getElementById("cookie-notice").style.display = "none";
+      console.log("Funkcija acceptCookies je pozvana.");
+      // Postavite kolačić koji označava da su kolačići prihvaćeni
+      document.cookie = "cookies_accepted=true; expires=Fri, 31 Dec 9999 23:59:59 UTC; path=/;";
+      document.getElementById("cookie-notice").style.display = "none";
     }
 
     function rejectCookies() {
-        // Obrišite kolačić koji označava da su kolačići prihvaćeni
-        document.cookie = "cookies_accepted=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        document.getElementById("cookie-notice").style.display = "none";
+      // Obrišite kolačić koji označava da su kolačići prihvaćeni
+      document.cookie = "cookies_accepted=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      document.getElementById("cookie-notice").style.display = "none";
     }
 
     // Provjerite ako je korisnik već prihvatio kolačiće
     if (document.cookie.indexOf("cookies_accepted=true") !== -1) {
-        document.getElementById("cookie-notice").style.display = "none";
-
-
+      document.getElementById("cookie-notice").style.display = "none";
     }
-
-
   </script>
-
+</body>
 </html>

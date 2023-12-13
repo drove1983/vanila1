@@ -9,19 +9,21 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!--
     <div class="row justify-content-center my-3">
     <div class="col-5">
       <img src="{% static 'images/vanila111.jpg' %}" class="img-fluid">
     </div>
-  </div>
+  </div>-->
+
+    <br><br>
 
     <title>VIDEO</title>
   </head>
   <body>
     <div class="container">
       {% for x in video %}
-        <div class="card mb-3" style="background-color: #f58989">
+        <div class="card mb-3" style="background-color: #A9A9A9">
           <div class="card-body">
             <h3 class="card-title text-center mt-2 mb-2">{{ x.caption }}</h3>
             <div class="embed-responsive embed-responsive-16by9">
@@ -36,5 +38,5 @@
     </div>
   </body>
   </html>
-  <br><br><br>
+  <br><br><br><br><br><br><br><br>
 {% endblock %}

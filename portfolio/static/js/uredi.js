@@ -97,5 +97,19 @@ jQuery(function ($) {
   }
 });
 
+ // Dohvatite sve linkove unutar dropdown menija
+  var productLinks = document.querySelectorAll(".dropdown-item");
+
+// Dohvatite sve linkove unutar dropdown menija
+  var productLinks = document.querySelectorAll(".dropdown-item");
+
+
+
+
+
+
+
+
+
 
 

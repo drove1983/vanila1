@@ -15,7 +15,7 @@
 <h3 class="text-center mb-5">Admin has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h3>
 
 {% for blog in blogs %}
-<div class="card my-3" style="background-color: #f58989;">
+<div class="card my-3" style="background-color: #A9A9A9;">
   <div class="card-body">
     <a href="{% url 'blog:detail' blog.id %}">
       <h2 class="card-title text-center text-black">{{ blog.title }}</h2>

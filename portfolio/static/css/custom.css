@@ -14,6 +14,8 @@ body {
     font-size: 6rem;
 }
 
+
+
 @media (min-width: 992px) {
     #hometext {
         font-size: 4rem;
@@ -21,107 +23,210 @@ body {
     #blogdetailtitle {
         font-size: 5rem;
     }
-
-.counter {
-    background-color:#f58989;
-    padding: 40px 0;
-    border-radius: 5px;
+@media (max-width: 768px) {
+    .navbar {
+        background-color: transparent; /* Postavite željenu boju pozadine */
+    }
 }
 
+
+
+ /* CAUNTER ----------------POČETAK------------------CAUNTER */
+/* brojac(pozadina i border) 1 */
+.counter {
+    background-color: #A9A9A9;
+    padding: 40px 0;
+    border: 5px solid  #d3d312;
+    border-radius: 20px
+}
+/* brojac(brojevi unutra) */
 .count-title {
     font-size: 40px;
     font-weight: normal;
     margin-top: 10px;
     margin-bottom: 0;
     text-align: center;
-
-.card {
-  background-color: black !important;
-  /*height: 300px;   Postavite željenu visinu kartica */
+    font-weight: bold; /* Postavite željenu font težinu */
+    color: #fbfbd0;
 }
-
-}
-
+/* tekst unutar brojaca 1 */
 .count-text {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: normal;
     margin-top: 10px;
     margin-bottom: 0;
     text-align: center;
+    font-weight: bold; /* Postavite željenu font težinu */
+    color: #f3f372;
 }
-
+/* ikone unutar brojaca 1 */
 .fa-2x {
     margin: 0 auto;
     float: none;
     display: table;
-    color: black;
+    font-weight: bold; /* Postavite željenu font težinu */
+    color: #f3f372;
 }
+/* CAUNTER ----------------KRAJ------------------CAUNTER */
+
+
+
+
+
+
+/* FOOTER ----------------POČETAK----------------------FOOTER */
+
 /* styles.css */
 .footer {
-  background-color: #f58989 !important;
-  color: white;
+  background-color:  #7a7284; !important;
+  color: #fbfbd0 !important;
+  font-weight: bold; /* Postavite željeni font-weight */
   text-align: center;
-  padding: 10px 0;
+  padding: 5px 0;
   position: fixed;
   bottom: 0;
   width: 100%;
-  min-height: 30px ; /* Promijenite visinu prema potrebi */
+  min-height: 100px ;  /* Promijenite visinu prema potrebi */
+  border-radius: 5px;
+  border: 5px solid  #d3d312;
+}
+footer a {
+  color: #fbfbd0 !important; /* Postavite željenu boju */
+  font-weight: bold; /* Postavite željeni font-weight */
+}
+footer ul li {
+  color: #fbfbd0 !important; /* Postavite željenu boju */
+  font-weight: bold; /* Postavite željeni font-weight */
+  font-size: 14px; /* Postavite željenu veličinu fonta */
+  /* Dodajte druge stilističke promjene prema potrebi */
+}
+/* FOOTER ----------------KRAJ---------------------FOOTER */
+
+
+
+
+
+/* NAVBAR ----------------POČETAK----------------------NAVBAR */
+/* Stilizacija za Pruduckte padajući meni kada je otvoren 4 */
+.navbar-nav .nav-item.dropdown.show .dropdown-menu {
+    background-color:  #848884;
+}
+/* Stilizacija Produkte za linkove unutar otvorenog padajućeg menija 3 */
+.navbar-nav .nav-item.dropdown.show .dropdown-menu .dropdown-item {
+    color:  white; /* Promenite boju teksta po potrebi */
+}
+/* Stilizacija za linkove unutar otvorenog padajućeg menija na hover(nisam siguran) */
+.navbar-nav .nav-item.dropdown.show .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Boja na hover efektu */
+    color:  black; /* Promenite boju teksta na hover efektu po potrebi */
+}
+/* Dodajte ove stilove u svoj CSS */
+.carousel-inner .carousel-item img {
+  max-width: 100%; /* Maksimalna širina slike je 100% širine roditeljskog elementa */
+  max-height: 600px; /* Maksimalna visina slike je 400 piksela (prilagodite po potrebi) */
+  width: auto; /* Automatska širina slike */
+  height: auto ; /* Automatska visina slike */
+}
+/* Navbar traka pravljenje bordera 5 */
+.navbar {
+    border: 5px solid  #d3d312; /* Postavite širinu, stil i boju border-a prema vašim željama */
+    border-radius: 5px;
+    background-color: #A9A9A9;
+}
+/* Navbar Tekst Producte padajuci menu 1*/
+.dropdown-menu a.dropdown-item {
+    font-weight: bold; /* Postavite željenu font težinu */
+    color: #fbfbd0 !important;
+}
+/* Navbar Tekst Producte 1*/
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: #fbfbd0 !important;
+}
+/* Stilizacija teksta */
+.navbar-brand span {
+  font-weight: bold; /* Postavite željenu debljinu fonta */
+  color: #464606 !important; /* Postavite željenu boju teksta */
+  display: inline-block; /* Postavite kao inline-block kako biste ga mogli centrirati */
+  margin-left: 10px; /* Postavite željeni razmak s lijeva ako je potrebno */
+}
+/* Centriranje teksta */
+.navbar-brand {
+  display: flex !important;
+  align-items: center !important;
+}
+/* NAVBAR ----------------KARAJ---------------------NAVBAR */
+
+
+
+
+
+/* CARD ----------------POČETAK--------------------CARD */
+/* nisam siguran*/
+.card-container {
+  width: 100%;
+  max-width: 800px; /* Povećajte maksimalnu širinu prema svojim potrebama */
+  margin: 0 auto;
+  border: 5px solid black !important;
+  border-radius: 20px;
+}
+/* Card u produkte 1 */
+.card {
+  border: 5px solid #d3d312  ; /* Dodajte okvir oko kartice */
+  border-radius: 20px; /* Dodajte zaobljeni rub okvira */
+  padding: 0px; /* Dodajte margine i razmak unutar okvira */
+  background-color: #A9A9A9  !important;
+}
+/* Card Produkte večicina naslovnoga tekste 2 */
+.card-title {
+  font-size: 30px;
+}
+/* Card Produkte velicinaa opisnog tekste 2 */
+.card-text {
+  font-size: 20px;
+}
+/* Naslovni tekst na kartici glavna stranica */
+.card .card-title {
+    font-size: 24px; /* Postavite željenu veličinu fonta za naslov */
+    color: #2f2f04 !important; /* Postavite željenu boju teksta za naslov */
+    font-weight: bold; /* Postavite željenu debljinu fonta */
+}
+/* Opisni tekst na kartici glavna stranica */
+.card .card-text {
+    font-size: 16px; /* Postavite željenu veličinu fonta za tekst */
+    color: #fbfbd0 !important;
+    font-weight: bold; /* Postavite željenu debljinu fonta */
+}
+/* Stilizacija datuma */
+.card .card-subtitle {
+  font-size: 16px; /* Postavite željenu veličinu fonta */
+  color: #fbfbd0 !important;
+  font-weight: bold;
 }
 
+/* CARD ----------------KARAJ--------------------CARD */
+
+
+
+
+/* CAROUSEL ----------------POČETAK------------------CAROUSEL */
+/* Slika na glavnoj stranici 1 */
 .carousel-inner {
-  border: 2px solid #f58989; /* Promijenite boju okvira prema potrebi */
-  border-radius: 5px; /* Zaobljenje okvira */
-  background-color: #f58989; /* Boja pozadine okvira */
+  border: 5px solid  #d3d312; /* Promijenite boju okvira prema potrebi */
+  border-radius: 20px; /* Zaobljenje okvira */
+  background-color:  #818589; /* Boja pozadine okvira */
   padding: 10px; /* Dodavanje unutarnjeg razmaka oko slajdova */
 }
 
+/* Nisam siguran */
 .carousel-item img {
   width: 100%;
   height: auto; /* Automatsko očuvanje omjera širine i visine */
   max-height: 400px; /* Prilagodite maksimalnu visinu prema potrebi */
 }
 
-/* Stil za okvir */
-.card-container {
-  width: 100%;
-  max-width: 600px; /* Postavite maksimalnu širinu okvira prema svojim potrebama */
-  margin: 0 auto; /* Centrirajte okvir na sredinu */
-
-}
-
-.card {
-  border: 2px solid #f58989; /* Dodajte okvir oko kartice */
-  border-radius: 10px; /* Dodajte zaobljeni rub okvira */
-  padding: 0px; /* Dodajte margine i razmak unutar okvira */
-
-}
-
-/* Prilagodite stil teksta i okvira prema svojim potrebama */
-.card-title {
-  font-size: 24px;
-}
-
-.card-text {
-  font-size: 16px;
-}
-
-/* Stilizacija za padajući meni kada je otvoren */
-.navbar-nav .nav-item.dropdown.show .dropdown-menu {
-    background-color: #f58989;
-}
-
-/* Stilizacija za linkove unutar otvorenog padajućeg menija */
-.navbar-nav .nav-item.dropdown.show .dropdown-menu .dropdown-item {
-    color: white; /* Promenite boju teksta po potrebi */
-}
-
-/* Stilizacija za linkove unutar otvorenog padajućeg menija na hover */
-.navbar-nav .nav-item.dropdown.show .dropdown-menu .dropdown-item:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Boja na hover efektu */
-    color: white; /* Promenite boju teksta na hover efektu po potrebi */
-}
+/* CAROUSEL ----------------KRAJ------------------CAROUSEL */
 
 
-}
 
 
