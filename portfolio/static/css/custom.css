@@ -23,12 +23,12 @@ body {
     #blogdetailtitle {
         font-size: 5rem;
     }
+
 @media (max-width: 768px) {
     .navbar {
         background-color: transparent; /* Postavite željenu boju pozadine */
     }
 }
-
 
 
  /* CAUNTER ----------------POČETAK------------------CAUNTER */
@@ -176,6 +176,7 @@ footer ul li {
   border-radius: 20px; /* Dodajte zaobljeni rub okvira */
   padding: 0px; /* Dodajte margine i razmak unutar okvira */
   background-color: #A9A9A9  !important;
+
 }
 /* Card Produkte večicina naslovnoga tekste 2 */
 .card-title {
@@ -207,8 +208,23 @@ footer ul li {
 .card-img-top img {
     border: 5px solid #d3d312  ; /* Dodajte okvir oko kartice */
     border-radius: 5px; /* Dodajte zaobljeni rub okvira */
-    padding: 0px; /* Dodajte margine i razmak unutar okvira */
+    padding: 5px; /* Dodajte margine i razmak unutar okvira */
     background-color: #A9A9A9  !important;
+    max-width: 100% !important;
+    max-height: 100%;
+    height: 200px; /* Postavite željenu visinu */
+    overflow: hidden;
+    height: auto !important;
+}
+/* Okvir za slike unutar bloga */
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+
+}
+.card img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* CARD ----------------KARAJ--------------------CARD */

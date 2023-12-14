@@ -23,18 +23,17 @@
     <h5 class="card-subtitle text-center text-white">{{ blog.date|date:'M d Y'|upper }}</h5>
     <p class="card-text text-center text-white">{{ blog.description|striptags|truncatechars:40}}</p>
   </div>
-  {% if blog.url %}
-    <div class="card-img-top image-frame mb-2 p-2 text-center"> <!-- Dodali smo 'text-center' za centriranje -->
-      <a href="{{ blog.url }}">
-        <img src="{{ blog.image.url }}" width="600" height="300" alt="Opis slike" class="mx-auto d-block"> <!-- Dodali smo 'mx-auto d-block' za centriranje -->
-      </a>
-    </div>
-  {% else %}
-    <div class="card-img-top image-frame mb-2 p-2 text-center"> <!-- Dodali smo 'text-center' za centriranje -->
-      <img src="{{ blog.image.url }}" width="600" height="300" alt="Opis slike" class="mx-auto d-block"> <!-- Dodali smo 'mx-auto d-block' za centriranje -->
-    </div>
-
-  {% endif %}
+ {% if blog.url %}
+<div class="card-img-top image-frame mb-2 p-2 text-center" style="overflow: hidden;"> <!-- Dodali smo 'text-center' za centriranje -->
+  <a href="{{ blog.url }}">
+    <img src="{{ blog.image.url }}" width="600" height="300" alt="Opis slike" class="mx-auto d-block" style="max-width: 100%; height: auto;"> <!-- Dodali smo stilove izravno na sliku -->
+  </a>
+</div>
+{% else %}
+<div class="card-img-top image-frame mb-2 p-2 text-center"> <!-- Dodali smo 'text-center' za centriranje -->
+  <img src="{{ blog.image.url }}" width="600" height="300" alt="Opis slike" class="mx-auto d-block" style="max-width: 100%; height: auto;"> <!-- Dodali smo stilove izravno na sliku -->
+</div>
+{% endif %}
 
 </div>
 
