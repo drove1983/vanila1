@@ -3,12 +3,12 @@
 {% load static %}
 
 {% block content %}
-
+<!--
   <div class="row justify-content-center my-3">
     <div class="col-5">
       <img src="{% static 'images/vanila111.jpg' %}" class="img-fluid">
     </div>
-  </div>
+  </div> -->
 
 <h1 id="blogtitle" class="font-weight-bold text-center"></h1>
 
@@ -23,8 +23,21 @@
     <h5 class="card-subtitle text-center text-white">{{ blog.date|date:'M d Y'|upper }}</h5>
     <p class="card-text text-center text-white">{{ blog.description|striptags|truncatechars:40}}</p>
   </div>
+  {% if blog.url %}
+    <div class="card-img-top image-frame mb-2 p-2 text-center"> <!-- Dodali smo 'text-center' za centriranje -->
+      <a href="{{ blog.url }}">
+        <img src="{{ blog.image.url }}" width="600" height="300" alt="Opis slike" class="mx-auto d-block"> <!-- Dodali smo 'mx-auto d-block' za centriranje -->
+      </a>
+    </div>
+  {% else %}
+    <div class="card-img-top image-frame mb-2 p-2 text-center"> <!-- Dodali smo 'text-center' za centriranje -->
+      <img src="{{ blog.image.url }}" width="600" height="300" alt="Opis slike" class="mx-auto d-block"> <!-- Dodali smo 'mx-auto d-block' za centriranje -->
+    </div>
+
+  {% endif %}
+
 </div>
 
 {% endfor %}
-<br><br><br>
+<br><br><br><br><br><br><br>
 {% endblock %}

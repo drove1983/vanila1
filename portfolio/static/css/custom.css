@@ -203,6 +203,13 @@ footer ul li {
   color: #fbfbd0 !important;
   font-weight: bold;
 }
+/* Blog sliak */
+.card-img-top img {
+    border: 5px solid #d3d312  ; /* Dodajte okvir oko kartice */
+    border-radius: 5px; /* Dodajte zaobljeni rub okvira */
+    padding: 0px; /* Dodajte margine i razmak unutar okvira */
+    background-color: #A9A9A9  !important;
+}
 
 /* CARD ----------------KARAJ--------------------CARD */
 
@@ -226,6 +233,8 @@ footer ul li {
 }
 
 /* CAROUSEL ----------------KRAJ------------------CAROUSEL */
+
+
 
 
 
