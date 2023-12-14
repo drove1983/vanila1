@@ -251,7 +251,20 @@ footer ul li {
 /* CAROUSEL ----------------KRAJ------------------CAROUSEL */
 
 
+/* Stil za Facebook ikonu */
+.facebook-icon {
+  display: inline-block;
+  width: 24px; /* Postavite željenu širinu ikone */
+  height: 24px; /* Postavite željenu visinu ikone */
+  margin-right: 10px; /* Dodajte razmak s desne strane ikone */
+}
 
+/* Stil za Instagram ikonu */
+  display: inline-block;
+  width: 24px; /* Postavite željenu širinu ikone */
+  height: 24px; /* Postavite željenu visinu ikone */
+  margin-right: 10px; /* Dodajte razmak s desne strane ikone */
+}
 
 
 
