@@ -14,7 +14,7 @@
   <div class="row">
     {% for pinza in pinza %}
       <div class="col-lg-4 col-md-6 mb-3">
-  <div class="card mb-4 h-100" style="background-color:  #A9A9A9;">
+  <div class="card mb-4 h-100" style="background-color:  #3b444b;">
     {% if pinza.url %}
       <a href="{{ pinza.url }}">
         <img src="{{ pinza.image.url }}" class="card-img-top image-frame mb-2 p-2">
@@ -31,8 +31,7 @@
     {% endfor %}
   </div>
 </div>
-    </div>
-  </div>
+
 <br><br><br><br><br><br><br>
 
 {% endblock %}

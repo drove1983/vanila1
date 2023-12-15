@@ -23,7 +23,15 @@ body {
     #blogdetailtitle {
         font-size: 5rem;
     }
+)
 
+@media (max-width: 991px) {
+    #hometext, #blogdetailtitle {
+        font-size: 2rem; /* Postavite odgovarajuću veličinu fonta */
+        /* Zadržite border i prilagodite stil */
+        border: 1px solid #yourBorderColor; /* Postavite boju i debljinu bordera */
+    }
+}
 @media (max-width: 768px) {
     .navbar {
         background-color: transparent; /* Postavite željenu boju pozadine */
@@ -34,9 +42,9 @@ body {
  /* CAUNTER ----------------POČETAK------------------CAUNTER */
 /* brojac(pozadina i border) 1 */
 .counter {
-    background-color: #A9A9A9;
+    background-color: #3b444b;
     padding: 40px 0;
-    border: 5px solid  #d3d312;
+    border: 5px solid  white;
     border-radius: 20px
 }
 /* brojac(brojevi unutra) */
@@ -65,7 +73,7 @@ body {
     float: none;
     display: table;
     font-weight: bold; /* Postavite željenu font težinu */
-    color: #f3f372;
+    color: #F88379;
 }
 /* CAUNTER ----------------KRAJ------------------CAUNTER */
 
@@ -88,7 +96,7 @@ body {
   width: 100%;
   min-height: 100px ;  /* Promijenite visinu prema potrebi */
   border-radius: 5px;
-  border: 5px solid  #d3d312;
+  border: 5px solid  white;
 }
 footer a {
   color: #fbfbd0 !important; /* Postavite željenu boju */
@@ -107,29 +115,46 @@ footer ul li {
 
 
 /* NAVBAR ----------------POČETAK----------------------NAVBAR */
+/* Pomaknite sve stavke u navigacijskoj traci ulijevo */
+.nav-item {
+    margin-right: 50px; /* Postavite željeni razmak između stavki */
+}
+.nav-item:nth-child(1) {
+    margin-right: 0;
+}
+
+.nav-item:nth-child(2) {
+    margin-right: 3px;
+}
+
+.nav-item:nth-child(3) {
+    margin-right: 10px;
+}
+
+.nav-item:nth-child(4) {
+    margin-right: 3px;
+}
+
+.nav-item:nth-child(5) {
+    margin-right: 10px;
+}
 /* Stilizacija za Pruduckte padajući meni kada je otvoren 4 */
 .navbar-nav .nav-item.dropdown.show .dropdown-menu {
     background-color:  #848884;
 }
 /* Stilizacija Produkte za linkove unutar otvorenog padajućeg menija 3 */
 .navbar-nav .nav-item.dropdown.show .dropdown-menu .dropdown-item {
-    color:  white; /* Promenite boju teksta po potrebi */
+    color:  #F2D2BD; /* Promenite boju teksta po potrebi */
 }
 /* Stilizacija za linkove unutar otvorenog padajućeg menija na hover(nisam siguran) */
 .navbar-nav .nav-item.dropdown.show .dropdown-menu .dropdown-item:hover {
     background-color: rgba(0, 0, 0, 0.5); /* Boja na hover efektu */
     color:  black; /* Promenite boju teksta na hover efektu po potrebi */
 }
-/* Dodajte ove stilove u svoj CSS */
-.carousel-inner .carousel-item img {
-  max-width: 100%; /* Maksimalna širina slike je 100% širine roditeljskog elementa */
-  max-height: 600px; /* Maksimalna visina slike je 400 piksela (prilagodite po potrebi) */
-  width: auto; /* Automatska širina slike */
-  height: auto ; /* Automatska visina slike */
-}
+
 /* Navbar traka pravljenje bordera 5 */
 .navbar {
-    border: 5px solid  #d3d312; /* Postavite širinu, stil i boju border-a prema vašim željama */
+    border: 5px solid  white; /* Postavite širinu, stil i boju border-a prema vašim željama */
     border-radius: 5px;
     background-color: #A9A9A9;
 }
@@ -146,7 +171,7 @@ footer ul li {
 /* Stilizacija teksta */
 .navbar-brand span {
   font-weight: bold; /* Postavite željenu debljinu fonta */
-  color: #464606 !important; /* Postavite željenu boju teksta */
+  color: #F88379 !important; /* Postavite željenu boju teksta */
   display: inline-block; /* Postavite kao inline-block kako biste ga mogli centrirati */
   margin-left: 10px; /* Postavite željeni razmak s lijeva ako je potrebno */
 }
@@ -172,10 +197,10 @@ footer ul li {
 }
 /* Card u produkte 1 */
 .card {
-  border: 5px solid #d3d312  ; /* Dodajte okvir oko kartice */
+  border: 5px solid white  ; /* Dodajte okvir oko kartice */
   border-radius: 20px; /* Dodajte zaobljeni rub okvira */
   padding: 0px; /* Dodajte margine i razmak unutar okvira */
-  background-color: #A9A9A9  !important;
+  background-color: #3b444b  !important;
 
 }
 /* Card Produkte večicina naslovnoga tekste 2 */
@@ -189,7 +214,7 @@ footer ul li {
 /* Naslovni tekst na kartici glavna stranica */
 .card .card-title {
     font-size: 24px; /* Postavite željenu veličinu fonta za naslov */
-    color: #2f2f04 !important; /* Postavite željenu boju teksta za naslov */
+    color: #F88379 !important; /* Postavite željenu boju teksta za naslov */
     font-weight: bold; /* Postavite željenu debljinu fonta */
 }
 /* Opisni tekst na kartici glavna stranica */
@@ -206,10 +231,10 @@ footer ul li {
 }
 /* Blog sliak */
 .card-img-top img {
-    border: 5px solid #d3d312  ; /* Dodajte okvir oko kartice */
+    border: 5px solid whte; /* Dodajte okvir oko kartice */
     border-radius: 5px; /* Dodajte zaobljeni rub okvira */
     padding: 5px; /* Dodajte margine i razmak unutar okvira */
-    background-color: #A9A9A9  !important;
+    background-color: #3b444b  !important;
     max-width: 100% !important;
     max-height: 100%;
     height: 200px; /* Postavite željenu visinu */
@@ -235,9 +260,9 @@ footer ul li {
 /* CAROUSEL ----------------POČETAK------------------CAROUSEL */
 /* Slika na glavnoj stranici 1 */
 .carousel-inner {
-  border: 5px solid  #d3d312; /* Promijenite boju okvira prema potrebi */
+  border: 5px solid  white; /* Promijenite boju okvira prema potrebi */
   border-radius: 20px; /* Zaobljenje okvira */
-  background-color:  #818589; /* Boja pozadine okvira */
+  background-color:  #3b444b; /* Boja pozadine okvira */
   padding: 10px; /* Dodavanje unutarnjeg razmaka oko slajdova */
 }
 
@@ -247,7 +272,13 @@ footer ul li {
   height: auto; /* Automatsko očuvanje omjera širine i visine */
   max-height: 400px; /* Prilagodite maksimalnu visinu prema potrebi */
 }
-
+/* Dodajte ove stilove u svoj CSS */
+.carousel-inner .carousel-item img {
+  max-width: 100%; /* Maksimalna širina slike je 100% širine roditeljskog elementa */
+  max-height: 600px; /* Maksimalna visina slike je 400 piksela (prilagodite po potrebi) */
+  width: auto; /* Automatska širina slike */
+  height: auto ; /* Automatska visina slike */
+}
 /* CAROUSEL ----------------KRAJ------------------CAROUSEL */
 
 
@@ -266,5 +297,7 @@ footer ul li {
   margin-right: 10px; /* Dodajte razmak s desne strane ikone */
 }
 
-
+body {
+  background-color: #F2D2BD; /* Postavite željenu boju pozadine(bež) */
+}
 

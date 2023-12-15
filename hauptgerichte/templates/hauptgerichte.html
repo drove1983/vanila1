@@ -14,7 +14,7 @@
   <div class="row">
     {% for hauptgerichte in hauptgerichte%}
       <div class="col-lg-4 col-md-6 mb-3">
-        <div class="card mb-4 h-100" style="background-color: #A9A9A9;" > <!-- Dodali smo klasu "card" za stiliziranje kartice -->
+        <div class="card mb-4 h-100" style="background-color: #3b444b;" > <!-- Dodali smo klasu "card" za stiliziranje kartice -->
           {% if hauptgerichte.url %}
             <a href="{{ hauptgerichte.url }}">
               <img src="{{ hauptgerichte.image.url }}" class="card-img-top image-frame mb-2 p-2"> <!-- Dodali smo klasu "image-frame" za stiliziranje okvira slike -->
