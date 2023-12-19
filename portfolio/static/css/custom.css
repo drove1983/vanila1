@@ -1,3 +1,4 @@
+/*
 .navbar-nav .nav-link {
     color: rgba(0,0,0,1) ;
 }
@@ -13,7 +14,7 @@ body {
 #blogtitle {
     font-size: 6rem;
 }
-
+*/
 
 
 @media (min-width: 992px) {
@@ -29,12 +30,12 @@ body {
     #hometext, #blogdetailtitle {
         font-size: 2rem; /* Postavite odgovarajuću veličinu fonta */
         /* Zadržite border i prilagodite stil */
-        border: 1px solid #yourBorderColor; /* Postavite boju i debljinu bordera */
+        border: 1px solid #F2D2BD; /* Postavite boju i debljinu bordera */
     }
 }
 @media (max-width: 768px) {
     .navbar {
-        background-color: transparent; /* Postavite željenu boju pozadine */
+        background-color: #F2D2BD; /* Postavite željenu boju pozadine */
     }
 }
 
@@ -73,7 +74,7 @@ body {
     float: none;
     display: table;
     font-weight: bold; /* Postavite željenu font težinu */
-    color: #F88379;
+    color: #F8DE7E;
 }
 /* CAUNTER ----------------KRAJ------------------CAUNTER */
 
@@ -171,7 +172,7 @@ footer ul li {
 /* Stilizacija teksta */
 .navbar-brand span {
   font-weight: bold; /* Postavite željenu debljinu fonta */
-  color: #F88379 !important; /* Postavite željenu boju teksta */
+  color: #F8DE7E !important; /* Postavite željenu boju teksta */
   display: inline-block; /* Postavite kao inline-block kako biste ga mogli centrirati */
   margin-left: 10px; /* Postavite željeni razmak s lijeva ako je potrebno */
 }
@@ -214,7 +215,7 @@ footer ul li {
 /* Naslovni tekst na kartici glavna stranica */
 .card .card-title {
     font-size: 24px; /* Postavite željenu veličinu fonta za naslov */
-    color: #F88379 !important; /* Postavite željenu boju teksta za naslov */
+    color: #F8DE7E !important; /* Postavite željenu boju teksta za naslov */
     font-weight: bold; /* Postavite željenu debljinu fonta */
 }
 /* Opisni tekst na kartici glavna stranica */
@@ -298,6 +299,6 @@ footer ul li {
 }
 
 body {
-  background-color: #F2D2BD; /* Postavite željenu boju pozadine(bež) */
+  background-color: #F8DE7E; /* Postavite željenu boju pozadine(bež) */
 }
 
